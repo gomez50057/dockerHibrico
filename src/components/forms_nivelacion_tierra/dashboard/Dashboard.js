@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 import Preloader from '../shared/Preloader';
 import '../shared/Preloader.css';
 import './Dashboard.css';
-const imgIconos = "/img/forms nivelacion tierra/iconos/";
-const img = "/img/forms nivelacion tierra/";
+const imgIconos = "/planhidrico/img/forms nivelacion tierra/iconos/";
+const img = "/planhidrico/img/forms nivelacion tierra/";
 
 const DashboardCharts = dynamic(() => import('./DashboardCharts'), { loading: () => <Preloader />, ssr: false });
 const Formulario = dynamic(() => import('../forms/FormNivelacion'), { loading: () => <Preloader />, ssr: false });
@@ -30,7 +30,7 @@ export default function Dashboard() {
       .then((res) => {
         if (res.status === 401) {
           // No autenticado: redirigir a login
-          window.location.href = '/login';
+          window.location.href = '/planhidrico/login';
           return null;
         }
         return res.json();
@@ -43,7 +43,7 @@ export default function Dashboard() {
       })
       .catch(() => {
         // Error de red u otro: redirigir a login
-        window.location.href = '/login';
+        window.location.href = '/planhidrico/login';
       });
 
     const listItems = document.querySelectorAll('.list-item');
@@ -81,7 +81,7 @@ export default function Dashboard() {
       method: 'POST',
       credentials: 'include',
     }).finally(() => {
-      window.location.href = '/login';
+      window.location.href = '/planhidrico/login';
     });
   };
 

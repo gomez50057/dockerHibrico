@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from './login.module.css';
-const imgBasePath = "/img/login/";
+const imgBasePath = "/planhidrico/img/login/";
 
 
 export default function LoginPage() {

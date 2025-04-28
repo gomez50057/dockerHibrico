@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 
-const img = "/img/";
-const imgLogos = "/img/forms nivelacion tierra/logos/";
+const img = "/planhidrico/img/";
+const imgLogos = "/planhidrico/img/forms nivelacion tierra/logos/";
 
 
 const Navbar = () => {
@@ -41,8 +41,8 @@ const Navbar = () => {
         <div className={styles.NavbarInicio}>
           <ul className={styles.navbarOpc}>
             <li><Link href="/">Inicio</Link></li>
-            <li><Link href="/ecos-del-territorio-hidrico">Materiales de apoyo</Link></li>
-            <li><Link href="/training">Capacitación</Link></li>
+            {/* <li><Link href="/ecos-del-territorio-hidrico">Materiales de apoyo</Link></li>
+            <li><Link href="/training">Capacitación</Link></li> */}
             <li><Link href="/dashboard">Nivelación</Link></li>
           </ul>
           <div className={styles.NavbarCirculo}>
